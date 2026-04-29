@@ -2,17 +2,19 @@
 # -*- coding: utf-8 -*-
 
 import requests
+import urllib3
 import threading
 import time
 import socket
 import dns.resolver
 import urllib.parse
 import ssl
-import urllib3
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 from bs4 import BeautifulSoup
 from colorama import Fore
 from .utils import load_wordlist, random_delay
+
+# Matikan warning di module ini juga
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 class FullRecon:
     def __init__(self, target):
