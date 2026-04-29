@@ -1,0 +1,8 @@
+{
+    "threads": 100,
+    "timeout": 3,
+    "delay_ms": 20,
+    "proxy": null,
+    "max_depth": 10,
+    "report_format": "html"
+}
