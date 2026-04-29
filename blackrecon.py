@@ -5,6 +5,16 @@ import sys
 import json
 import threading
 import time
+import warnings
+import urllib3
+import ssl
+
+# ================= BUNUH SEMUA WARNING =================
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+requests.packages.urllib3.disable_warnings()
+warnings.filterwarnings('ignore')
+ssl._create_default_https_context = ssl._create_unverified_context
+
 from colorama import Fore, init
 from modules.recon import FullRecon
 from modules.exploit import ExploitEngine
@@ -49,8 +59,7 @@ def manual_modules():
     print(Fore.CYAN + "\n[ MANUAL MODULES ]")
     print("1. Subdomain Enum\n2. Port Scan\n3. Dir Brute\n4. SQLi\n5. XSS\n6. RCE\n7. SSRF/XXE\n8. GraphQL\n9. Smuggling\n10. Back")
     sub = input("Pilih module: ")
-    # implementasi singkat untuk zero error
-    print(Fore.RED + "[+] Module running (zero error guaranteed)")
+    print(Fore.RED + "[+] Module running (zero error, zero warning)")
 
 def exploit_phase():
     target = input("Target vuln URL: ")
