@@ -8,6 +8,8 @@ import socket
 import dns.resolver
 import urllib.parse
 import ssl
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 from bs4 import BeautifulSoup
 from colorama import Fore
 from .utils import load_wordlist, random_delay
