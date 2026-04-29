@@ -6,8 +6,11 @@ import json
 import threading
 import time
 import warnings
-import urllib3
 import ssl
+
+# ================= IMPORT REQUESTS DULU =================
+import requests
+import urllib3
 
 # ================= BUNUH SEMUA WARNING =================
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
